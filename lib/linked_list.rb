@@ -39,9 +39,17 @@ class LinkedList
   end
 
   def prepend(data)
-    # require 'pry'; binding.pry
     node = Node.new(data)
     node.create_next(@head)
     @head = node
+  end
+
+  def insert(position, data)
+    pointer = @head
+    (position - 1).times do 
+      pointer = pointer.next_node
+    end
+    new_node = Node.new(data, pointer.next_node)
+    pointer.create_next(new_node)
   end
 end
