@@ -28,6 +28,13 @@ class LinkedList
   end
 
   def to_string
-    @head.data
+    # TODO: inject next node data
+    string = @head.data
+    next_node = @head.next_node
+    while next_node
+      string += ' ' + next_node.data
+      next_node = next_node.next_node
+    end
+    string
   end
 end
