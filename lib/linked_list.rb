@@ -10,7 +10,6 @@ class LinkedList
     if @head.nil?
       @head = node
     else
-      # @head.create_next(node)
       current_node = @head
       new_node = Node.new(data)
       while current_node.next_node
@@ -60,6 +59,5 @@ class LinkedList
   end
 
   def find(position, amount)
-    require 'pry'; binding.pry
   end
 end
