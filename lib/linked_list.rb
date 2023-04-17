@@ -17,5 +17,7 @@ class LinkedList
     count
   end
 
-  
+  def to_string
+    @head.data
+  end
 end
