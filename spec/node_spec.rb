@@ -8,4 +8,17 @@ RSpec.describe Node do
     expect(node.data).to eq('plop')
     expect(node.next_node).to eq(nil)
   end
+  
+  context 'instance methods' do
+    it 'adds a next node' do
+      node = Node.new('plop')
+      node_2 = Node.new('splat')
+      
+      expect(node.next_node).to eq(nil)
+
+      node.create_next(node_2)
+
+      expect(node.next_node).to eq(node_2)
+    end
+  end
 end
