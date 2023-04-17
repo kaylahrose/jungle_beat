@@ -18,6 +18,11 @@ class LinkedList
     count = 0
     unless @head.nil?
       count +=1
+      pointer = @head.next_node
+      while pointer
+        count +=1
+        pointer = pointer.next_node 
+      end
     end
     count
   end
