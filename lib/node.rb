@@ -9,4 +9,8 @@ class Node
   def create_next(node)
     @next_node = node
   end
+
+  def clear_next
+    @next_node = nil
+  end
 end

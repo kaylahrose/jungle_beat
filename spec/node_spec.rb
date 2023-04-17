@@ -20,5 +20,14 @@ RSpec.describe Node do
 
       expect(node.next_node).to eq(node_2)
     end
+
+    it '#clear_next' do
+    node = Node.new('plop')
+    node_2 = Node.new('splat') 
+    node.create_next(node_2)
+    node.clear_next
+
+    expect(node.next_node).to eq(nil)
+    end
   end
 end
