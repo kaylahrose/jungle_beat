@@ -59,5 +59,17 @@ class LinkedList
   end
 
   def find(position, amount)
+    pointer = @head
+    (position - 1).times do 
+      pointer = pointer.next_node
+    end
+    # require 'pry  '; binding.pry
+    string = pointer.next_node.data
+
+      (amount - 1).times do 
+        pointer = pointer.next_node
+        string += ' ' + pointer.next_node.data
+      end
+    string
   end
 end
