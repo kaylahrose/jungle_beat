@@ -6,10 +6,11 @@ class LinkedList
   end
 
   def append(data)
+    node = Node.new(data)
     if @head.nil?
-      @head = Node.new(data)
+      @head = node
     else
-      require 'pry'; binding.pry
+      @head.create_next(node)
     end
   end
 

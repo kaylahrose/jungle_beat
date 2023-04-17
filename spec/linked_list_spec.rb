@@ -2,7 +2,7 @@ require "./lib/linked_list"
 require './lib/node'
 
 RSpec.describe LinkedList do
-  xit 'exists and has attributes' do
+  it 'exists and has attributes' do
     list = LinkedList.new
 
     expect(list).to be_a(LinkedList)
@@ -10,7 +10,7 @@ RSpec.describe LinkedList do
   end
 
   context 'instance methods' do
-    xit 'appends a node to a list' do
+    it 'appends a node to a list' do
       list = LinkedList.new
       list.append('doop')
 
