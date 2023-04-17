@@ -63,9 +63,7 @@ class LinkedList
     (position - 1).times do 
       pointer = pointer.next_node
     end
-    # require 'pry  '; binding.pry
     string = pointer.next_node.data
-
       (amount - 1).times do 
         pointer = pointer.next_node
         string += ' ' + pointer.next_node.data
