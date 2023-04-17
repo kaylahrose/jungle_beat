@@ -80,4 +80,13 @@ class LinkedList
     end
     element == data
   end
+
+  def pop
+    curr_node = @head
+    while curr_node.next_node.next_node
+      break if curr_node.next_node.next_node.nil?
+      curr_node = curr_node.next_node
+    end
+    curr_node.clear_next
+  end
 end
