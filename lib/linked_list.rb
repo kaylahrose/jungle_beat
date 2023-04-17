@@ -70,4 +70,14 @@ class LinkedList
       end
     string
   end
+
+  def includes?(data)
+    curr_node = @head
+    element = @head.data
+    until element == data || curr_node.next_node.nil?
+      curr_node = curr_node.next_node 
+      element = curr_node.data
+    end
+    element == data
+  end
 end
