@@ -22,7 +22,7 @@ RSpec.describe LinkedList do
     end
 
     context 'multiple elements' do
-      it 'appends multiple elements in the list' do
+      it '#append' do
         list = LinkedList.new
         list.append('doop')
         list.append("deep")
@@ -32,6 +32,26 @@ RSpec.describe LinkedList do
         expect(list.count).to eq(2)
         expect(list.to_string).to eq('doop deep')
       end 
+
+      it '#prepend' do
+        list = LinkedList.new
+        list.append("plop")
+        list.append("suu")
+        list.prepend("dop")
+        expect(list.to_string).to eq("dop plop suu")      
+        expect(list.count).to eq(3)
+      end
+
+      it '#insert' do
+        list = LinkedList.new
+        list.append("plop")
+        list.append("suu")
+        list.prepend("dop") 
+        list.insert(1, "woo")
+
+        expect(list.to_string).to eq("dop woo plop suu")
+        expect(list.count).to eq(4)
+      end
     end
   end
 end
