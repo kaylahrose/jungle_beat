@@ -37,4 +37,11 @@ class LinkedList
     end
     string
   end
+
+  def prepend(data)
+    # require 'pry'; binding.pry
+    node = Node.new(data)
+    node.create_next(@head)
+    @head = node
+  end
 end
